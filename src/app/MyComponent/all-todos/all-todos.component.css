@@ -3,6 +3,12 @@
     margin: auto;
 }
 
+.empty-list{
+    width: 100%;
+    text-align: center;
+    font-size: large;
+}
+
 @media screen and (max-width:900px) {
     .all-todo-main-div{
         width: 90%;
