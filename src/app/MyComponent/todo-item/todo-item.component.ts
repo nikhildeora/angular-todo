@@ -16,6 +16,7 @@ export class TodoItemComponent implements OnInit {
   @Output() todoDelete = new EventEmitter(); 
   @Output() todoEdit = new EventEmitter(); 
 
+  // at load time we are checking that how many days we left till deadline. If it is less than or equal to 2 than this.todoDeadline will be true; 
   ngOnInit(): void {
     if (this.todo) {
       this.todoName = this.todo.name;
@@ -34,6 +35,7 @@ export class TodoItemComponent implements OnInit {
      this.todoDelete.emit(id); 
   }
 
+  // here we are checking if any field is empty or not and we only emit our function if user change something 
   todoEditFun(){
     if(this.editTodo){
       if(this.todoDesc==="" || this.todoName===""){

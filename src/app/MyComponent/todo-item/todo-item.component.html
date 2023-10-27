@@ -1,4 +1,5 @@
 <div [ngClass]="{'urgent': todoDeadline }" *ngIf="todo" class="todo-item-div">
+  <!-- if editTodo is true we will get input box for made changes, edit button converts into save button and then we can save; -->
   <div class="first-div" *ngIf="editTodo; else elseBlock">
     <div>
       <label for="todoName">Task:</label>

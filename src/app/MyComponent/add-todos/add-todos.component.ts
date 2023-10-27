@@ -24,6 +24,7 @@ export class AddTodosComponent implements OnInit {
   todoDeadline: string = '';
   datevalid: string = '';
 
+  // at load time we are taking current date as string and give value to this.datevalid which is bind with input min Attribute. so we can get dynamic results for choosing dates 
   ngOnInit(): void {
     let newDateis = new Date();
     let arr = [];
@@ -53,6 +54,7 @@ export class AddTodosComponent implements OnInit {
       return;
     }
 
+    // we used uuid library to generate unique id's
     const newTodoItem: Todo = {
       ind: uuidv4(),
       name: this.todoName,
@@ -65,6 +67,8 @@ export class AddTodosComponent implements OnInit {
     this.todos.push(newTodoItem);
     localStorage.setItem('MyTodosList', JSON.stringify(this.todos));
     alert('new todo added');
+
+    // again empty all inputs 
     this.todoDesc = '';
     this.todoName = '';
     this.todoLongDesc = '';
