@@ -1,0 +1,21 @@
+<form (ngSubmit)="onSubmit()" class="add-todo-form">
+    <h1>Add Todo</h1>
+    <div>
+      <label for="todoName">Task:</label>
+      <input placeholder="Add Task" maxlength="20" [(ngModel)]="todoName" type="text" name="todoName" id="todoName" required>
+    </div>
+    <div>
+      <label for="todoDesc">Small Description:</label>
+      <input placeholder="Add Small Description max 48 char" minlength="15" maxlength="40" [(ngModel)]="todoDesc" type="text" name="todoDesc" id="todoDesc" required>
+    </div>
+    <div>
+      <label for="todoDeadline">Deadline:</label>
+      <input [min]="datevalid" [(ngModel)]="todoDeadline" type="date" name="todoDeadline" id="todoDeadline" required>
+    </div>
+    <div>
+      <label for="todoLongDesc">Long Description:</label>
+      <textarea placeholder="Add Long Description max 250 char" minlength="40" maxlength="250" [(ngModel)]="todoLongDesc" name="todoLongDesc" id="todoLongDesc" cols="30" rows="10" required></textarea>
+    </div>
+    <button type="submit">Add Todo</button>
+  </form>
+  

@@ -1,0 +1,11 @@
+
+
+<div *ngIf="todo" class="todo-description">
+    <h1>Todo Complete Description</h1>
+    <h2>{{ todo.name | uppercase }}</h2>
+    <p>{{ todo.desc | capitalize }}</p>
+    <p>{{ todo.longDesc }}</p>
+    <p><span class="deadline-head">Deadline: </span>{{todo.deadline | date}}</p>
+    <p [ngClass]="{'todo-complete': todo.status, 'todo-incomplete': !todo.status }">{{ todo.status ? "Completed" : "Not Complete Yet" }}</p>
+  </div>
+  

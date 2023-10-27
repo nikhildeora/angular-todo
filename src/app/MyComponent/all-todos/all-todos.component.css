@@ -1,0 +1,10 @@
+.all-todo-main-div{
+    width: 70%;
+    margin: auto;
+}
+
+@media screen and (max-width:900px) {
+    .all-todo-main-div{
+        width: 90%;
+    }
+}

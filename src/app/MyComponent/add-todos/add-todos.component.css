@@ -1,0 +1,57 @@
+.add-todo-form {
+    background-color: rgba(25, 118, 210, 1);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .add-todo-form h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .add-todo-form div {
+    margin-bottom: 15px;
+  }
+  
+  .add-todo-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .add-todo-form input[type="text"] , .add-todo-form input[type="date"] , textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .add-todo-form button {
+    background-color: white;
+    color: rgba(25, 118, 210, 1);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid white;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .add-todo-form button:hover {
+    background-color: rgba(25, 118, 210, 1);
+    color: white;
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .add-todo-form {
+      max-width: 100%;
+    }
+  }
+  

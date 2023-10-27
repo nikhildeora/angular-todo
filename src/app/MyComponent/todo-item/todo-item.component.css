@@ -1,0 +1,104 @@
+.todo-item-div {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+  }
+  
+ .first-div{
+   flex: 5;
+  }
+  .second-div{
+   flex: 2;
+  }
+  .third-div{
+   flex: 3;
+   display: flex;
+   justify-content: space-around;
+ }
+ 
+ .urgent{
+  border: 3px solid red;
+ }
+
+ .urgent .first-div h2{
+   color: red;
+ }
+ .urgent .first-div h2::after{
+   content: "(Urgent)";
+ }
+
+ @media screen and (max-width:600px) {
+  .todo-item-div {
+    margin: 15px 0;
+    flex-direction: column;
+  }
+  .first-div{
+    width: 100%;
+    text-align: center;
+   }
+   .second-div{
+   width: 100%;
+    text-align: center;
+    margin-top: 5px;
+   }
+   .third-div{
+    width: 100%;
+    text-align: center;
+    justify-content: space-evenly;
+    margin-top: 5px;
+  }
+ }
+
+  .todo-item-div:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .todo-item-div label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .todo-item-div input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .todo-item-div h2 {
+    font-size: 24px;
+    color: #007BFF; /* Teal color */
+  }
+  
+  .todo-item-div p {
+    font-size: 16px;
+  }
+  
+  .todo_strike {
+    text-decoration: line-through;
+  }
+  
+  .todo-item-div input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .todo-item-div button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .todo-item-div button:hover {
+    background-color: #0056b3; /* Darker teal color */
+  }
+  

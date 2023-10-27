@@ -1,0 +1,49 @@
+.todo-description {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .todo-description h1 {
+    font-size: 28px;
+    color: #007BFF; 
+    margin-bottom: 10px;
+  }
+  
+  .todo-description h2 {
+    font-size: 24px;
+    color: #333; 
+    margin: 20px 0;
+  }
+  
+  .todo-description p {
+    font-size: 18px;
+    color: #444; 
+    margin: 10px 0;
+  }
+  
+ .deadline-head{
+    font-weight: bold;
+ }
+
+  .todo-description .todo-complete {
+    color: #00C853;
+  }
+  
+  .todo-description .todo-incomplete {
+    color: #FF5722;
+  }
+  
+  /* Media query */
+  @media (max-width: 750px) {
+    .todo-description {
+      padding: 10px;
+      max-width: 95%;
+      margin: auto;
+    }
+  }
+  

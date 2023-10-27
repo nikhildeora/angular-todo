@@ -1,0 +1,35 @@
+<div [ngClass]="{'urgent': todoDeadline }" *ngIf="todo" class="todo-item-div">
+  <div class="first-div" *ngIf="editTodo; else elseBlock">
+    <div>
+      <label for="todoName">Task:</label>
+      <input [(ngModel)]="todoName" type="text" name="todoName" id="todoName" />
+    </div>
+    <div>
+      <label for="todoDesc">Small Description:</label>
+      <input [(ngModel)]="todoDesc" type="text" name="todoDesc" id="todoDesc" />
+    </div>
+  </div>
+  <ng-template #elseBlock>
+    <div class="first-div">
+      <h2 [ngClass]="{ todo_strike: todo.status }">
+        {{ todo.name | uppercase }}
+      </h2>
+      <p>{{ todo.desc }}</p>
+    </div>
+  </ng-template>
+  <div class="second-div" *ngIf="!editTodo">
+    <input
+      (change)="todoToggleFun(todo.ind)"
+      [checked]="todo.status"
+      type="checkbox"
+      name="toggleTodo"
+      id="toggleTodo{{ todo.ind }}"
+    />
+    <label for="toggleTodo{{ todo.ind }}">Mark as Done</label>
+  </div>
+  <div class="third-div">
+    <button (click)="todoDeleteFun(todo.ind)">Delete</button>
+    <button (click)="todoEditFun()">{{ editTodo ? "Save" : "Edit" }}</button>
+    <a [routerLink]="['/single-todo',todo.ind]"><button>Details</button></a>
+  </div>
+</div>
